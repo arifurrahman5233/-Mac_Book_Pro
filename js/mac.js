@@ -49,6 +49,7 @@ function updateTotal() {
     const grandTotal = memoryPrice + baseTotal + storagePrice +storageprice1TB +  shippingPrice;
     total.innerText = grandTotal;
     totalAmount.innerText = grandTotal;
+    
 
 //----Promo apply---//
 document.getElementById('promoApply').addEventListener('click', function () {
@@ -63,6 +64,8 @@ document.getElementById('promoApply').addEventListener('click', function () {
         const discountPrice = totalPriceNumeric * 0.2;
         const totalPriceAmount = grandTotal - discountPrice;
         totalPrice.innerText = totalPriceAmount;
+        promoInput.value = '';
+        document.getElementById("promoApply").disabled = true;
     }
     else {
         totalPrice.innerText = totalamount;
