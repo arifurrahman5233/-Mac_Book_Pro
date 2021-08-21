@@ -50,6 +50,7 @@ function updateTotal() {
     total.innerText = grandTotal;
     totalAmount.innerText = grandTotal;
     
+    
 
 //----Promo apply---//
 document.getElementById('promoApply').addEventListener('click', function () {
@@ -62,7 +63,7 @@ document.getElementById('promoApply').addEventListener('click', function () {
 
     if (promoInputText == 'stevekaku') {
         const discountPrice = totalPriceNumeric * 0.2;
-        const totalPriceAmount = grandTotal - discountPrice;
+        const totalPriceAmount = grandTotal - discountPrice ;
         totalPrice.innerText = totalPriceAmount;
         promoInput.value = '';
         document.getElementById("promoApply").disabled = true;
